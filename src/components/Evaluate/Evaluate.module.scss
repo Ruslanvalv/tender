@@ -1,0 +1,254 @@
+.Evaluate {
+  overflow: hidden;
+  max-width: 1326px;
+  background: #eff7ff;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  border-radius: 9px;
+  display: flex;
+
+  .ColumnLeft {
+    max-width: 640px;
+    text-align: start;
+    padding: 144px 0 156px 72px;
+    position: relative;
+    width: 46%;
+    margin-right: 145px;
+  }
+  .ColumnRight {
+    position: relative;
+    .Arrow {
+      position: absolute;
+
+      left: 50px;
+      top: 150px;
+      visibility: hidden;
+    }
+  }
+  .Header {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 120%;
+    margin-bottom: 35px;
+  }
+  .MainText {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 36px;
+
+    color: #6b7280;
+  }
+  .Dots {
+    width: 208px;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    right: -92px;
+    bottom: -5px;
+    .Dots_item {
+      background-color: #a8d5f5;
+      border-radius: 50%;
+      height: 8px;
+      margin: 7px 9px;
+      width: 8px;
+    }
+  }
+}
+.Animation {
+  .Arrow {
+    animation: showArrow 0.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+  }
+  .LawyerMessage {
+    animation: showRight 0.5s;
+    animation-fill-mode: forwards;
+  }
+  .ProjectExample {
+    animation: showRightProject 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+  }
+}
+.LawyerMessage {
+  position: relative;
+  visibility: hidden;
+  background: #ffffff;
+  box-shadow: 0px 2px 10px #cdd6e7;
+  border-radius: 9px;
+  max-width: 348px;
+  padding: 18px;
+  margin: 46px 0 0px 126px;
+  box-sizing: border-box;
+  margin-bottom: 35px;
+  &_header {
+    display: flex;
+    margin-bottom: 14px;
+    &_avatar {
+      width: 40px;
+      height: 40px;
+      background: url(../../../public/lawyerphoto.png) no-repeat;
+      background-size: cover;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    &_name {
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 18px;
+      color: #56688a;
+      margin: 0;
+      margin-bottom: 4px;
+    }
+    &_time {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 18px;
+      color: #818c9f;
+      margin: 0;
+    }
+  }
+  &_info {
+    font-size: 14px;
+    line-height: 18px;
+    /* or 129% */
+
+    color: #262626;
+  }
+}
+.ProjectExample {
+  position: relative;
+
+  max-width: 500px;
+  visibility: hidden;
+
+  &_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4b5e80;
+    background: #f1f4f9;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    padding: 8px 0 10px 0;
+    span {
+      margin: 0 15px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+  &_text {
+    padding: 18px 50px 24px;
+    background: #ffffff;
+    box-shadow: 0px 12px 18px #cdd6e7;
+    border-radius: 0 0 9px 9px;
+    font-size: 14px;
+    line-height: 144%;
+
+    h3 {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      text-align: center;
+      margin-bottom: 18px;
+    }
+    p {
+      margin-top: 14px;
+    }
+    &_number {
+      font-size: 14px;
+      line-height: 144%;
+      margin-left: 48px;
+      margin-right: 38px;
+    }
+    &_description {
+      background: #d8f5fe;
+    }
+  }
+}
+@keyframes showRight {
+  from {
+    right: -100%;
+  }
+
+  to {
+    right: 0;
+    visibility: visible;
+  }
+}
+@keyframes showRightProject {
+  from {
+    right: -100%;
+  }
+
+  to {
+    right: 0;
+    visibility: visible;
+  }
+}
+@keyframes showArrow {
+  from {
+    transform: rotate(45deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: rotate(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media (max-width: 805px) {
+  .Evaluate {
+    margin: 0;
+    flex-direction: column;
+    padding: 48px 14px;
+    .Dots {
+      display: none;
+    }
+    .ColumnLeft {
+      text-align: start;
+      padding: 0;
+      position: relative;
+      width: 100%;
+      margin-right: 0;
+      padding: 0 10px;
+      margin-bottom: 36px;
+      .Header {
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 24px;
+      }
+      .MainText {
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
+    .LawyerMessage {
+      max-width: 400px;
+      margin: 0;
+      margin-bottom: 24px;
+    }
+    .Arrow {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 612px) {
+  .Evaluate {
+    .LawyerMessage {
+      max-width: 612px;
+      width: 100%;
+    }
+    .ProjectExample {
+      max-width: 612px;
+      width: 100%;
+      .ProjectExample_text {
+        padding: 18px 24px 14px;
+      }
+    }
+  }
+}

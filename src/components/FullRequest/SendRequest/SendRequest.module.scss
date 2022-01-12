@@ -1,0 +1,87 @@
+.SendRequest {
+  background: #7d6cf4;
+  border-radius: 9px;
+  padding: 66px 20px 24px;
+
+  margin: 0 auto;
+  .Form {
+    background: #ffffff;
+    box-shadow: 0px 18px 25px #5041b7;
+    border-radius: 9px;
+    margin: 0 auto 24px;
+
+    padding: 36px 0 32px 0;
+    text-align: center;
+    max-width: 815px;
+    img {
+      margin-bottom: 36px;
+    }
+    h1 {
+      font-size: 36px;
+      line-height: 48px;
+    }
+    p {
+      margin: 33px auto 24px;
+      font-size: 18px;
+      line-height: 144%;
+      max-width: 570px;
+      color: #6b7280;
+    }
+    .Button {
+      background: #dff5ce;
+      border-radius: 9px;
+      padding: 9px 16px;
+      margin: 0 auto;
+      max-width: 274px;
+      a {
+        font-size: 15px;
+        line-height: 18px;
+
+        color: #48862c;
+      }
+    }
+  }
+  .Rules {
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    max-width: 504px;
+    margin: 0 auto;
+    text-align: center;
+    span {
+      cursor: pointer;
+    }
+  }
+}
+@media (max-width: 805px) {
+  .SendRequest {
+    padding: 36px 14px 24px;
+    margin: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    .Form {
+      padding: 36px 0 48px 0;
+      text-align: center;
+      max-width: 815px;
+      img {
+        width: 281px;
+        height: 184px;
+      }
+      h1 {
+        font-size: 24px;
+        line-height: 36px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 24px;
+        color: #6b7280;
+        margin: 20px 25px 24px;
+        font-style: normal;
+        font-weight: 500;
+      }
+    }
+    .Rules {
+    }
+  }
+}

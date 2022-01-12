@@ -1,0 +1,245 @@
+.Consult {
+  overflow: hidden;
+  max-width: 1326px;
+  background: #eceefa;
+  margin: 0 auto;
+
+  border-radius: 9px;
+  display: flex;
+
+  .ColumnLeft {
+    max-width: 640px;
+    text-align: start;
+    padding: 144px 0 180px 69px;
+    position: relative;
+    width: 45%;
+    margin-right: 64px;
+  }
+  .Header {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 36px;
+  }
+  .MainText {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 36px;
+
+    color: #6b7280;
+  }
+  .ColumnRight {
+    position: relative;
+    margin: 96px 80px;
+
+    .ZigZag {
+      position: absolute;
+      left: 3%;
+      top: 40%;
+    }
+
+    .CommentMessage1 {
+      background: #ffffff;
+      box-shadow: 0 2px 10px #cdd6e7;
+      border-radius: 9px;
+      max-width: 404px;
+      margin-left: 92px;
+      margin-bottom: 35px;
+      padding: 18px;
+      &_header {
+        display: flex;
+
+        margin-bottom: 10px;
+        .HeaderInfo {
+          display: flex;
+        }
+        &_time {
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 18px;
+          color: #818c9f;
+          margin: 0;
+        }
+      }
+      &_info {
+        font-size: 14px;
+        line-height: 18px;
+        /* or 129% */
+
+        color: #262626;
+      }
+    }
+    .CommentMessage2 {
+      background: #ffffff;
+      box-shadow: 0 2px 10px #cdd6e7;
+      border-radius: 9px;
+      max-width: 404px;
+      margin-left: 43px;
+      padding: 18px;
+      &_header {
+        display: flex;
+
+        margin-bottom: 10px;
+        .HeaderInfo {
+          display: flex;
+        }
+        &_time {
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 18px;
+          color: #818c9f;
+          margin: 0;
+        }
+      }
+      &_info {
+        font-size: 14px;
+        line-height: 18px;
+        /* or 129% */
+
+        color: #262626;
+      }
+    }
+
+    .LawyerMessage {
+      position: relative;
+      background: #ffffff;
+      box-shadow: 0 2px 10px #cdd6e7;
+      border-radius: 9px;
+      max-width: 468px;
+      padding: 18px;
+      padding-right: 20px;
+      margin-bottom: 36px;
+      margin-left: 50px;
+
+      &_header {
+        display: flex;
+
+        &_avatar {
+          width: 50px;
+          height: 50px;
+          margin-right: 14px;
+          margin-top: -4px;
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+          }
+        }
+        .HeaderInfo {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        &_name {
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 18px;
+          color: #56688a;
+
+          margin-bottom: 10px;
+          margin-right: 9px;
+        }
+        &_time {
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 18px;
+          color: #818c9f;
+          margin: 0;
+        }
+      }
+      &_info {
+        font-size: 14px;
+        line-height: 18px;
+        /* or 129% */
+
+        color: #262626;
+      }
+    }
+  }
+}
+
+@media (max-width: 1155px) {
+  .Consult {
+    .ColumnLeft {
+      padding: 40px;
+      width: 40%;
+    }
+    .ColumnRight {
+      margin: 48px 40px;
+    }
+  }
+}
+
+@media (max-width: 805px) {
+  .Consult {
+    flex-direction: column;
+    margin: 0;
+    padding-bottom: 48px;
+    .ColumnLeft {
+      margin-top: 48px;
+      margin: 48px 0px 36px;
+      padding: 0 20px;
+      width: 100%;
+      .Header {
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 24px;
+      }
+      .MainText {
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
+    .ColumnRight {
+      margin: 0 14px;
+      .LawyerMessage {
+        margin-bottom: 24px;
+        margin-left: 0;
+        max-width: 100%;
+      }
+      .CommentMessage1 {
+        margin-bottom: 24px;
+        margin-left: 0;
+        max-width: 100%;
+      }
+      .CommentMessage2 {
+        margin-left: 0;
+        max-width: 100%;
+      }
+    }
+    .ZigZag {
+      display: none;
+    }
+  }
+}
+.Animation {
+  .LawyerMessage {
+    animation: fadeIn 0.5s;
+  }
+  .CommentMessage1 {
+    animation: fadeIn 0.5s;
+    animation-delay: 1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+  }
+
+  .CommentMessage2 {
+    animation: fadeIn 0.5s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+    visibility: none;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+}

@@ -1,0 +1,171 @@
+.DextopFooter {
+  padding: 48px 0 36px;
+}
+
+.Footer {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1230px;
+  margin: 0 auto;
+  justify-content: space-between;
+  .ColumnLeft {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 650px;
+    margin-left: 15px;
+    .Contacts {
+      svg {
+        margin-bottom: 18px;
+      }
+      a {
+        color: #000000;
+        text-decoration: none;
+      }
+      .MainNumber {
+        font-size: 30px;
+        line-height: 36px;
+        margin-top: 14px;
+        margin-bottom: 0;
+      }
+      span {
+        font-size: 16px;
+        line-height: 19px;
+        color: #56688a;
+      }
+      ul {
+        li:not(:first-child) {
+          margin-bottom: 9px;
+        }
+      }
+    }
+
+    .Menu {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 320px;
+      ul {
+        list-style-type: none;
+        li:not(:last-child) {
+          margin-bottom: 12px;
+        }
+        li {
+          margin: 0;
+          padding: 0;
+          a:hover {
+            text-decoration: underline;
+            opacity: 1;
+          }
+          a:active {
+            opacity: 0.5;
+            text-decoration: underline;
+          }
+          a {
+            opacity: 0.8;
+            font-size: 14px;
+            line-height: 16px;
+            color: #56688a;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  .ColumnRight {
+    display: flex;
+    max-width: 515px;
+    width: 100%;
+    .Registry {
+      display: flex;
+      img {
+        margin-right: 24px;
+        width: 34px;
+        height: 38px;
+      }
+      p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 16px;
+        width: 175px;
+        color: #8495ad;
+      }
+    }
+
+    .Networks {
+      display: flex;
+      height: 34px;
+      flex-direction: column;
+
+      ul {
+        display: flex;
+        margin-bottom: 24px;
+        justify-content: flex-end;
+      }
+      span {
+        font-size: 14px;
+        line-height: 16px;
+        color: #56688a;
+      }
+      .Seti {
+        position: relative;
+        width: 34px;
+        height: 34px;
+
+        border-radius: 50%;
+        background: #2f3e6d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .Seti:not(:last-child) {
+        margin-right: 13px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1205px) {
+  .Footer {
+    .ColumnLeft {
+      max-width: 535px;
+      .Menu {
+        max-width: 288px;
+      }
+    }
+    .ColumnRight {
+      max-width: 455px;
+    }
+  }
+}
+
+@media (max-width: 1028px) {
+  .Footer {
+    margin-left: 24px;
+    margin-right: 24px;
+    .ColumnLeft {
+      margin-bottom: 15px;
+    }
+    .ColumnRight {
+      max-width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      .Networks {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 66%;
+        ul {
+          margin-bottom: 0;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 805px) {
+  .DextopFooter {
+    display: none;
+  }
+}

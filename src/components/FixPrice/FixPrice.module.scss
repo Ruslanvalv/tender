@@ -1,0 +1,223 @@
+.FixPrice {
+  overflow: hidden;
+  max-width: 1326px;
+
+  margin: 0 auto;
+
+  border-radius: 9px;
+  display: flex;
+
+  .ColumnLeft {
+    max-width: 640px;
+    text-align: start;
+    margin: auto 74px;
+    position: relative;
+    width: 40%;
+  }
+  .Header {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 36px;
+  }
+  .MainText {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 36px;
+
+    color: #6b7280;
+  }
+
+  .ColumnRight {
+    background: #e1f6d8;
+    border-radius: 9px;
+    padding: 24px 72px;
+    min-width: 460px;
+
+    margin: 110px 0 0 30px;
+    margin-bottom: 72px;
+
+    .Card {
+      max-width: 432px;
+      min-width: 380px;
+      background: #fff;
+      position: relative;
+      border-radius: 9px;
+      padding: 16px 74px 16px 23px;
+
+      h2 {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 24px;
+        color: #4b5e80;
+        margin: 0;
+        margin-bottom: 18px;
+      }
+      .Prices {
+        display: flex;
+        justify-content: space-between;
+        p {
+          font-size: 14px;
+          line-height: 18px;
+          color: #4b5e80;
+          margin: 0;
+          margin-bottom: 4px;
+        }
+        span {
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 36px;
+          color: #8ab278;
+        }
+        .RightPrice span {
+          color: #48862c;
+        }
+      }
+    }
+    .Card:not(:last-child) {
+      margin-bottom: 18px;
+    }
+  }
+}
+
+@media (max-width: 1170px) {
+  .FixPrice {
+    .ColumnLeft {
+      margin: auto;
+    }
+    .ColumnRight {
+      padding: 20px 48px;
+      margin-left: 0;
+    }
+  }
+}
+@media (max-width: 805px) {
+  .FixPrice {
+    margin-top: 40px;
+    margin-bottom: 64px;
+    flex-direction: column;
+    .ColumnLeft {
+      width: 100%;
+      margin: 24px;
+      margin-bottom: 36px;
+      .Header {
+        font-size: 24px;
+        line-height: 36px;
+      }
+      .MainText {
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
+    .ColumnRight {
+      margin: 0;
+      padding: 20px;
+      min-width: 300px;
+      height: 478px;
+      .Card {
+        margin: 0 auto 18px;
+        padding: 20px;
+        min-width: 260px;
+        h2 {
+          font-size: 16px;
+        }
+        .Prices {
+          p {
+            font-size: 13px;
+          }
+          span {
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 445px) {
+  .FixPrice {
+    .ColumnRight {
+      height: 580px;
+    }
+  }
+}
+
+@keyframes firstCard {
+  0% {
+    top: 0;
+    transform: scale(0.8);
+    z-index: 1;
+  }
+
+  33% {
+    top: 35%;
+    transform: scale(1);
+    z-index: 10;
+  }
+  66% {
+    top: 70%;
+    transform: scale(0.8);
+    z-index: 1;
+  }
+  100% {
+    top: 0;
+    transform: scale(0.8);
+    z-index: 1;
+  }
+}
+@keyframes secondCard {
+  0% {
+    top: 0;
+    transform: scale(1);
+    z-index: 10;
+  }
+
+  33% {
+    top: 35%;
+    transform: scale(0.8);
+    z-index: 1;
+  }
+  66% {
+    top: -35%;
+    transform: scale(0.8);
+    z-index: 1;
+  }
+  100% {
+    top: 0;
+    transform: scale(1);
+    z-index: 10;
+  }
+}
+@keyframes thirdCard {
+  0% {
+    top: 0%;
+    transform: scale(0.8);
+    z-index: 1;
+  }
+  33% {
+    top: -70%;
+    transform: scale(0.8);
+    z-index: 1;
+  }
+  66% {
+    top: -35%;
+    transform: scale(1);
+    z-index: 10;
+  }
+  100% {
+    top: 0%;
+    transform: scale(0.8);
+    z-index: 1;
+  }
+}
+.Animation {
+  .Card:nth-child(1) {
+    animation: firstCard 4.8s infinite;
+  }
+  .Card:nth-child(2) {
+    animation: secondCard 4.8s infinite;
+  }
+  .Card:nth-child(3) {
+    animation: thirdCard 4.8s infinite;
+  }
+}
